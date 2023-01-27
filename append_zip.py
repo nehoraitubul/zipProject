@@ -2,7 +2,7 @@ import zipfile
 import warnings
 
 
-file_name = "C:\ZipProjectTests\Test2.zip"
+file_name = "C:\ZipProjectTests\Test1.zip"
 try:
     with zipfile.ZipFile(file_name, 'a') as zip:
         zip.printdir()
@@ -12,7 +12,7 @@ try:
             zip.printdir()
         except UserWarning as erorr:
             print(erorr)
-            usr_inp = input("its look like this file is already exist, please press 1 if you want to force this process or 0 to terminate")
+            usr_inp = input("its look like this file is already exist, please press 1 if you want to force this process or 0 to terminate ")
             if usr_inp == "1":
                 warnings.resetwarnings()
                 warnings.filterwarnings('ignore')
